@@ -1,0 +1,30 @@
+To find frequencies of letters [a-z] in a huge text of few GBs, do you need Map/Reduce?
+
+Yes, We do need Map/Reduce to find out the frequencies.
+ input 
+ echo 'this is myword and list
+ 
+ Map will be =====  sed 's/\(.\)/\1 /g' |sed -r 's/[ ]+/\n/g' |sort -S 1g 
+ 
+ Explaination --- First sed will split word into the letters seperated by space
+              --- Second sed will replace spaces with the new line
+              --- third sort will sort in acessending order with 1gb memory
+ Reduce will be ==== uniq -c
+              --- uniq -c will count the each occurence.
+ 
+ 
+ Output 
+       1 
+      1 a
+      2 d
+      1 h
+      3 i
+      1 l
+      1 m
+      1 n
+      1 o
+      1 r
+      3 s
+      2 t
+      1 w
+      1 y
