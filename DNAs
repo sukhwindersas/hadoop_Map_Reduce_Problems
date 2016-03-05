@@ -1,0 +1,52 @@
+3a. A file contains the DNA sequence of people. Find all the people who have same DNAs.
+
+Input:
+“User1 ACGT” 
+“User2 TGCA”
+“User3 ACG”
+“User4 ACGT”
+“User5 ACG”
+“User6 AGCT”
+
+Output: 
+User1, User4
+User2
+User3, User 5
+User6
+
+funcMapper(key, value)
+{
+key=DNA
+Value=User
+}
+
+funcReducer(key,value)
+{
+combine keys togther 
+}
+
+3b. A file contains the DNA sequence of people. Find all the people who have same or mirror image of DNAs.
+
+Input:
+“User1 ACGT”
+“User2 TGCA”
+“User3 ACG”
+“User4 ACGT”
+“User5 ACG”
+
+Output: 
+User1, User2, User4
+User3, User 5
+
+funcMapper(key, value)
+{
+key=Create unique key with DNA and Reverse of DNA and join togther
+value=User
+}
+
+funcRedcuer(key, value)
+{
+Search DNA in Key if found combine togather
+
+}
+
